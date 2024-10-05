@@ -105,7 +105,6 @@ function validateFormLogin() {
         passwordError.textContent = '';
       }
     }
-  
     return !hasErrors;
   }
   const loginButton = document.querySelector('input[type="submit"]');
@@ -117,7 +116,6 @@ function validateFormLogin() {
     // If validation passes, submit the form
     document.querySelector('form').submit();
   });
-
 const fnameInput = document.getElementById('fname');
 const emailInput = document.getElementById('email');
 const passwordInput = document.getElementById('password');
@@ -149,8 +147,6 @@ passwordInput.addEventListener('input', () => {
   } else {
     passwordIcon1.classList.remove('hide-icon');
   }
-});
-confirmPasswordInput.addEventListener('input', () => {
 });
 const signUpButton = document.querySelector('input[type="submit"]');
 const emailIcon = document.querySelector('i.fa.fa-envelope.icon');
