@@ -1,8 +1,6 @@
 function togglePasswordVisibility() {
   const passwordInput = document.getElementById('password');
- 
   const eyeIcon = document.querySelector('.eye-icon');
-
   if (passwordInput.type === 'password') {
     passwordInput.type = 'text';
     eyeIcon.classList.add('eye-icon-visible');
@@ -10,11 +8,7 @@ function togglePasswordVisibility() {
     passwordInput.type = 'password';
     eyeIcon.classList.remove('eye-icon-visible');
   }
-
 }
-
-
-
 function validateForm() {
     const fnameInput = document.getElementById('fname');
     const emailInput = document.getElementById('email');
@@ -114,34 +108,20 @@ function validateFormLogin() {
   
     return !hasErrors;
   }
-  
-  // Get the login button
   const loginButton = document.querySelector('input[type="submit"]');
-  
-  // Add an event listener to the login button
   loginButton.addEventListener('click', (e) => {
-    // Prevent the default form submission
     e.preventDefault();
-  
-    // Call the validateForm function
     if (!validateFormLogin()) {
-      // If validation fails, do nothing
       return;
     }
-  
     // If validation passes, submit the form
     document.querySelector('form').submit();
   });
 
-
-
-
-// Get the input fields and icons
 const fnameInput = document.getElementById('fname');
 const emailInput = document.getElementById('email');
 const passwordInput = document.getElementById('password');
 const confirmPasswordInput = document.getElementById('confirm-password');
-
 const fnameIcon = document.querySelector('i.fa.fa-user.icon');
 const emailIcon1 = document.querySelector('i.fa.fa-envelope.icon');
 const passwordIcon1 = document.querySelector('i.fa.fa-key.icon');
@@ -170,29 +150,12 @@ passwordInput.addEventListener('input', () => {
     passwordIcon1.classList.remove('hide-icon');
   }
 });
-
 confirmPasswordInput.addEventListener('input', () => {
-  // You don't have an icon for confirm password, so you can remove this block if you don't need it
-  // If you add an icon, you can add the code here
 });
-
-
-
-
-
-
-
-
-
-
-// Get the signup button and the icon elements
 const signUpButton = document.querySelector('input[type="submit"]');
 const emailIcon = document.querySelector('i.fa.fa-envelope.icon');
 const passwordIcon = document.querySelector('i.fa.fa-key.icon');
-
-// Add an event listener to the signup button
 signUpButton.addEventListener('click', () => {
-  // Add the class to the icon elements
   emailIcon.classList.add('active');
   passwordIcon.classList.add('active');
 });
